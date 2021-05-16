@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Weather Forecast</title>
+	<meta name="viewport" content="width=device-width" />
+	<link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css"/>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+</head>
+<body>
+	<button onclick="openFullscreen();">full-screen mode - click here</button>
+	<p>• hide / show browser toolbar in full-screen [Chrome - ⇧⌘F]</p>
+	<p> ⟷ drag the frame to resize</p>
+	<h1 id="title">
+			Weather forecast in 
+			<input type="text" name="location" placeholder="[ type your location ]" value="" />
+			<input type="submit" value="→" />
+	</h1>
+
+	<div id="temp">
+	</div>
+	<div id='timeline'>
+		<div class="ui-resizable-handle ui-resizable-nw" id="nwgrip"></div>
+		<div class="ui-resizable-handle ui-resizable-ne" id="negrip"></div>
+		<div class="ui-resizable-handle ui-resizable-sw" id="swgrip"></div>
+		<div class="ui-resizable-handle ui-resizable-se" id="segrip"></div>
+		<div class="ui-resizable-handle ui-resizable-n" id="ngrip"></div>
+		<div class="ui-resizable-handle ui-resizable-e" id="egrip"></div>
+		<div class="ui-resizable-handle ui-resizable-s" id="sgrip"></div>
+		<div class="ui-resizable-handle ui-resizable-w" id="wgrip"></div>  
+	</div>
+	<script type="text/javascript" src="script.js"></script>
+	<script>
+		var elem = document.getElementById("timeline");
+		function openFullscreen() {
+		  if (elem.requestFullscreen) {
+		    elem.requestFullscreen();
+		  } else if (elem.webkitRequestFullscreen) { /* Safari */
+		    elem.webkitRequestFullscreen();
+		  } else if (elem.msRequestFullscreen) { /* IE11 */
+		    elem.msRequestFullscreen();
+		  }
+		}
+	</script>
+</body>
+</html>

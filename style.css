@@ -1,0 +1,160 @@
+@font-face {
+  font-family: "myFont";
+  src: url("Kobe.otf");
+}
+
+*{scrollbar-width: none;user-drag: none; user-select: none;-moz-user-select: none;-webkit-user-drag: none;-webkit-user-select: none;-ms-user-select: none;}
+*::-webkit-scrollbar { width: 0 !important }
+*{ -ms-overflow-style: none;scrollbar-width: none;
+	margin: 0;
+	padding: 0;
+	border:0;
+	outline: 0;
+}
+
+html, body { 
+	width: 100vw;
+	height:200vh;
+	font-size: 1em;
+	font-family:myFont;
+	background-color:#000;
+	color:#fff;
+}
+
+button{
+	background-color:#000;
+	color:yellow;
+	font-family:myFont;
+	border:none;
+	padding-left:0.5vw;
+	padding:1vw;
+	padding-bottom:0vw;
+	margin-left:0.5vw;
+	line-height:1.3;
+	font-size: 1em;
+}
+
+button:hover{text-decoration:underline;}
+
+p{
+	display:inline-block;
+	background-color:#000;
+	color:#fff;
+	font-family:myFont;
+	border:none;
+	padding-left:0.5vw;
+	padding:1vw;
+	padding-bottom:0vw;
+	margin-left:0.5vw;
+	line-height:1;
+	text-align:left;
+	font-size: 1em;
+	word-spacing: 2px;
+
+}
+
+#title { 
+	width: 50vw;
+	/*padding:0.5vw;*/
+	padding-left:1.5vw;
+	color:#fff;
+	font-size:1.7em;
+}
+
+#title input { 
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+	background-color:#000;
+}
+#title input[type="text"] { 
+	width: 9.125em;
+	padding: 0.25em 0;
+	color: yellow;
+}
+
+#title input[type="text"]::-webkit-input-placeholder {
+	color: yellow;
+}
+
+#title input[type="submit"] { 
+	background: transparent;
+	cursor: pointer;
+	display: none;
+	color:#fff;
+}
+#title input[type="text"]:focus + input[type="submit"] { 
+	display: inline;
+}
+
+#temp {
+	width:20vw;
+	font-size: 1.7em;
+	font-family:myFont;
+	color:yellow;	
+	padding:0.7em;
+	padding-top:0.2em;
+	padding-bottom:0.2em;
+}
+ 
+#timeline {
+    border: 1px solid #000000;
+    width: 50vw;
+    height: 70vh;
+    margin-left:25vw;
+    margin-top:5vh;
+    position:relative;
+}
+
+#timeline:hover {
+    border: 1px solid yellow;
+}
+
+#timeline.active{
+	border: 1px solid yellow;
+ }
+
+#timeline img {
+	position: absolute;
+	top: 50%; left: 50%;
+	width:100%;
+	height:100%;
+	transform: translate(-50%,-50%);
+	transition: opacity 60s;
+	opacity: 1;
+}
+
+#timeline img.change-me { opacity: 0 }
+
+#nwgrip, #negrip, #swgrip, #segrip, #ngrip, #egrip, #sgrip, #wgrip {
+    width: 10px;
+    height: 10px;
+    background-color: #000;
+    border: 1px solid #000;
+    opacity:0.5;
+}
+
+#nwgrip:hover {background-color: yellow;border: 1px solid yellow;}
+#negrip:hover {background-color: yellow;border: 1px solid yellow;}
+#swgrip:hover {background-color: yellow;border: 1px solid yellow;}
+#segrip:hover {background-color: yellow;border: 1px solid yellow;}
+#ngrip:hover {background-color: yellow;border: 1px solid yellow;}
+#egrip:hover {background-color: yellow;border: 1px solid yellow;}
+#sgrip:hover {background-color: yellow;border: 1px solid yellow;}
+#wgrip:hover {background-color: yellow;border: 1px solid yellow;}
+
+#negrip {top:-6px; right:-6px;}
+#segrip {bottom:-6px; right:-6px;}
+#nwgrip {top:-6px; left:-6px;}
+#swgrip {bottom:-6px; left:-6px;}
+#ngrip {top:-6px;left:50%; margin-left:-6px;}
+#egrip {right:-6px; top:50%; margin-top:-6px;}
+#sgrip {bottom:-6px; left:50%; margin-left:-6px;}
+#wgrip {left:-6px;top:50%; margin-top:-6px;}
+
+
+@media screen and (max-height: 600px) {
+	#title { margin: 0.5em auto;}
+	#timeline {width:100vw;}
+	#timeline:hover {border: 0px solid #000;}
+}
